@@ -1,0 +1,267 @@
+.wallet-connect {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: -apple-system, system-ui, sans-serif;
+}
+
+.network-selector {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.network-selector button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.network-selector button.active {
+  background: #6B46C1;
+  color: white;
+  border-color: #6B46C1;
+}
+
+.connect-button {
+  width: 100%;
+  padding: 1rem;
+  background: #6B46C1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.account-info {
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.account-select {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.account-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  text-align: left;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.account-button.active {
+  background-color: #f0f0f0;
+  border-color: #6B46C1;
+}
+
+.account-select-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.account-option {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+}
+
+.switch-account {
+  margin-right: 8px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.transaction-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.donate-button {
+  background: #38A169;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.donate-button:disabled {
+  background: #9CA3AF;
+  cursor: not-allowed;
+}
+
+.status-message {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.status-message.success {
+  background: #C6F6D5;
+  color: #2F855A;
+}
+
+.status-message.error {
+  background: #FED7D7;
+  color: #C53030;
+}
+
+.assets-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.asset-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.asset-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.asset-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.asset-logo-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #6B46C1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.asset-info {
+  flex: 1;
+}
+
+.asset-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.asset-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.error {
+  color: #C53030;
+  padding: 1rem;
+  text-align: center;
+  background: #FED7D7;
+  border-radius: 6px;
+}
+
+.transaction-status {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: slideIn 0.3s ease;
+}
+
+.transaction-status.success {
+  background: #C6F6D5;
+  color: #2F855A;
+}
+
+.transaction-status.error {
+  background: #FED7D7;
+  color: #C53030;
+}
+
+.verification-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.verification-badge.trusted {
+  background: #C6F6D5;
+  color: #2F855A;
+}
+
+.verification-badge.verified {
+  background: #E9D8FD;
+  color: #6B46C1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
